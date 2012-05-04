@@ -4,8 +4,8 @@ from django.db import models
 class About(models.Model):
 	title = models.CharField(max_length=255)
 	image = models.ImageField(upload_to='pages_media')
-	column_one = models.TextFIeld(max_length=1024)
-	column_two = models.TextFIeld(max_length=1024)
+	column_one = models.TextField(max_length=1024)
+	column_two = models.TextField(max_length=1024)
 
 
 class ContactLink(models.Model):
