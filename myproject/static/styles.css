@@ -16,10 +16,6 @@ ul li{
 	letter-spacing: 2px;
 }
 
-.right_main {
-	float:left;
-	padding-right:30px;
-}
 
 .container{
 	margin-top:300px;
@@ -34,4 +30,8 @@ ul li{
 	position: relative;
 	display: block;
 	top:-10px;
+	float:left;
+	padding-right:30px;
+	width:78px;
+	height:116px;
 }

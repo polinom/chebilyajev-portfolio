@@ -4,8 +4,13 @@ from django.contrib.flatpages.models import FlatPage
 
 
 class Page(FlatPage):
-	image = models.ImageField(upload_to='pages_media', blank=True)
-	bukvitsa = models.ImageField(upload_to='pages_media', blank=True)
+    image = models.ImageField(upload_to='pages_media', blank=True)
+    bukvitsa = models.ImageField(upload_to='pages_media', blank=True)
+
+    @property
+    def get_image(self):
+        print image.url
+        return image.url
 
 
 class Galerry(models.Model):
