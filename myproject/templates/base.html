@@ -12,14 +12,24 @@
 </head>
 <body>
   {%block body %}
-        <div styl="font-size:30px;">Igor Chibilyaev</div>
-		{% load flatpages %}
-		{% get_flatpages as flatpages %}
-		<ul>
-		    {% for page in flatpages %}
-		        <li><a href="{{ page.url }}">{{ page.title }}</a></li>
-		    {% endfor %}
-		</ul>
+  <div class="container">
+  	    <div class="right_main"><img src='/static/images/emptypng.png'></div>
+
+  	    <div class='left_main'>
+	        <div><img src='/static/images/title.png'></div>
+			{% load flatpages %}
+			{% get_flatpages as flatpages %}
+			<ul class="menu">
+				<li><a href="/illystration/">Illystration</a></li> &#183;
+				<li><a href="/storyboard/">Storyboard</a></li> &#183;
+				<li><a href="/character_design/">Character Design</a></li>
+			    {% for page in flatpages %}
+			         &#183;
+			        <li><a href="{{ page.url }}">{{ page.title }}</a></li>
+			    {% endfor %}
+			</ul>
+		</div>
+  </div>
   {%endblock%}
 </body>
 </html>

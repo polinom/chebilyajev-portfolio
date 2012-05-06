@@ -10,16 +10,16 @@ class Page(FlatPage):
 
 class Galerry(models.Model):
 	CHOICES = (
-			(1,'Galerry'),
-			(2,'Illystrations'),
-			(3,'Character Design'),
+			('illystration','Illystration'),
+			('storyboard','Storyboard'),
+			('character_design','Character Design'),
 		)
 	title = models.CharField(max_length=222,blank=True)
 	description = models.TextField(max_length=1022, blank=True)
 	image = models.ImageField(upload_to='images')
 	updated = models.DateTimeField(auto_now=True)
 	created = models.DateTimeField(auto_now_add=True)
-	image_type = models.PositiveIntegerField(choices=CHOICES)
+	image_type = models.CharField(max_length=50, choices=CHOICES)
 
 
 	def __unicode__(self):
