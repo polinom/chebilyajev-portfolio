@@ -1,0 +1,22 @@
+{% extends "base.html" %}
+
+{%block title%}
+	{{ flatpage.title }}
+{%endblock%}
+
+
+{%block body%}
+      <div class="container">
+  	    <div class="right_main"><img src='{{flatpage.image.url}}'></div>
+  	    <div class='left_main'>
+	        <div><img src='/static/images/title.png'></div>
+			<ul class="menu">
+				<li><a href="/illystration/">Illystration</a></li> &#183;
+				<li><a href="/storyboard/">Storyboard</a></li> &#183;
+				<li><a href="/character_design/">Character Design</a></li>&#183;
+				<li><a href="/about/">About</a></li>&#183;
+				<li><a href="/contact/">Contact</a></li>
+			</ul>
+		</div>
+  </div>
+{%endblock%}
