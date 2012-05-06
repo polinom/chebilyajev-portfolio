@@ -1,29 +1,11 @@
+# coding=utf-8
 from django.db import models
+from django.contrib.flatpages.models import FlatPage
 
 
-class About(models.Model):
-	title = models.CharField(max_length=255)
-	image = models.ImageField(upload_to='pages_media')
-	column_one = models.TextField(max_length=1024)
-	column_two = models.TextField(max_length=1024)
-
-
-class ContactLink(models.Model):
-	title = models.CharField(max_length=255)
-	link = models.CharField(max_length=255)
-	icon = models.ImageField(upload_to='pages_media')
-
-
-class Contacts(models.Model):
-	image = models.ImageField(upload_to='pages_media')
-	title = models.CharField(max_length=255)
-	email = models.EmailField()
-	links = models.ForeignKey(ContactLink)
-
-
-class HomePage(models.Model):
-	image = models.ImageField(upload_to='pages_media')
-	name = models.ImageField(upload_to='pages_media')
+class Page(FlatPage):
+	image = models.ImageField(upload_to='pages_media', blank=True)
+	bukvitsa = models.ImageField(upload_to='pages_media', blank=True)
 
 
 class Galerry(models.Model):
@@ -32,8 +14,8 @@ class Galerry(models.Model):
 			(2,'Illystrations'),
 			(3,'Character Design'),
 		)
-	title = models.CharField(max_length=222)
-	description = models.TextField(max_length=1022)
+	title = models.CharField(max_length=222,blank=True)
+	description = models.TextField(max_length=1022, blank=True)
 	image = models.ImageField(upload_to='images')
 	updated = models.DateTimeField(auto_now=True)
 	created = models.DateTimeField(auto_now_add=True)
