@@ -1,4 +1,5 @@
 {% extends "base.html" %}
+{% load thumbnail %}
 
 
 {%block title%}
@@ -7,7 +8,51 @@
 
 
 {%block body%}
-    {%for item in items%}
-        {{item.image.url}}
-    {%endfor%}
+    <script src="{{STATIC_URL}}js/jquery-1.7.2.min.js" type="text/javascript"></script>
+    <script src="{{STATIC_URL}}js/galerry.js" type="text/javascript"></script>
+    <style>
+    	body{
+			background-color: #828385;
+		}
+    </style>
+    <div class="container galerry">
+	    <div id="thumb_container">
+	    	<!-- TITLE IMAGE GO HERE-->
+	    	<div class="title">
+	    		<img src="{{STATIC_URL}}images/{{title_img}}">
+	        </div>
+
+	        <!-- THUMBNAILS ICON LIST GO HERE-->
+	        <div class="thumb_list">
+		    {%for item in items%}
+		         {% thumbnail item.image "60x60" crop="center" as im %}
+		         <div class="thumb">
+				    <a href="#"><img class="image_thumb" src="{{ im.url }}" width="{{ im.width }}" height="{{ im.height }}" original="{{item.image.url}}"></a>
+				 </div>
+				{% endthumbnail %}
+		    {%endfor%}
+		    </div>
+
+		    <!-- BOTTOM_MENU_GO_HERE-->
+		    <div class="bottom_menu">
+	 			<ul>
+	 				<li><a href="/">Home</a></li>
+	 				{%ifnotequal title "illystration"%}
+					<li><a href="/illystration/">Illustration</a></li>
+					{%endifnotequal%}
+					{%ifnotequal title "storyboard"%}
+					<li><a href="/storyboard/">Storyboard</a></li>
+					{%endifnotequal%}
+					{%ifnotequal title "character_design"%}
+					<li><a href="/character_design/">Character Design</a></li>
+					{%endifnotequal%}
+					<li><a href="/about/">About</a></li>
+					<li><a href="/contact/">Contact</a></li>
+				</ul>
+		    </div>
+	    </div>
+	    <div id="original">
+	    	<img class="image_big" src="{{first_item.image.url}}">
+	    </div>
+	</div>
 {%endblock%}

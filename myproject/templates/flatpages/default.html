@@ -1,4 +1,5 @@
 {% extends "base.html" %}
+{% load thumbnail %}
 
 {%block title%}
 	{{ flatpage.title }}
@@ -6,5 +7,49 @@
 
 
 {%block body%}
-    {{ flatpage.content }}
+    <style>
+     .container {
+     	margin-top:150px;
+     }
+     .bottom_menu{
+          padding-top:100px;
+          bottom:inherit;
+     }
+     .bottom_menu a{
+          color:gray;
+     }
+     .bottom_menu ul{
+	    list-style-image: url(/static/images/gray_dot.png); 
+     }
+    </style>
+    <div class="container">
+	    <div class="page_title">
+	    {%ifequal flatpage.title "About"%}
+	        <img src="{{STATIC_URL}}images/about_big.png">
+	    {%endifequal%}
+	    {%ifequal flatpage.title "Contact"%}
+	         <img src="{{STATIC_URL}}images/contact_big.png">
+	    {%endifequal%}
+	    </div>
+	    <div class="page_image">
+		    {% thumbnail flatpage.image "90x135" crop="center" as im %}
+		        <img src="{{ im.url }}" width="{{ im.width }}" height="{{ im.height }}">
+			{% endthumbnail %}
+		</div>
+		<div class="page_content">
+		    {{ flatpage.content }}
+		</div>
+
+        <!-- BOTTOM_MENU_GO_HERE-->
+		<div class="bottom_menu">
+	 			<ul>
+	 				<li><a href="/">Home</a></li>
+					<li><a href="/illystration/">Illustration</a></li>
+					<li><a href="/storyboard/">Storyboard</a></li>
+					<li><a href="/character_design/">Character Design</a></li>
+					<li><a href="/about/">About</a></li>
+					<li><a href="/contact/">Contact</a></li>
+				</ul>
+		</div>
+    </div>
 {%endblock%}

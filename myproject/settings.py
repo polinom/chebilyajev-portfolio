@@ -2,6 +2,7 @@
 import os.path
 DEBUG = True
 TEMPLATE_DEBUG = DEBUG
+THUMBNAIL_DEBUG = DEBUG
 
 ADMINS = (
     # ('Your Name', 'your_email@example.com'),
@@ -125,6 +126,7 @@ INSTALLED_APPS = (
     # Uncomment the next line to enable the admin:
     'django.contrib.admin',
     'all',
+		'sorl.thumbnail',
     # Uncomment the next line to enable admin documentation:
     # 'django.contrib.admindocs',
 )
@@ -157,6 +159,15 @@ LOGGING = {
         },
     }
 }
+
+CACHES = {
+		    'default': {
+					'BACKEND': 'django.core.cache.backends.db.DatabaseCache',
+					'LOCATION': 'cache_table'
+                    }
+				}
+
+
 
 try:
     from local_settings import *
