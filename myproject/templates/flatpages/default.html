@@ -47,8 +47,13 @@
 					<li><a href="/illystration/">Illustration</a></li>
 					<li><a href="/storyboard/">Storyboard</a></li>
 					<li><a href="/character_design/">Character Design</a></li>
-					<li><a href="/about/">About</a></li>
+			       {%ifequal flatpage.title "About"%}
 					<li><a href="/contact/">Contact</a></li>
+	                {%endifequal%}
+	                {%ifequal flatpage.title "Contact"%}
+					<li><a href="/about/">About</a></li>
+	                {%endifequal%}
+
 				</ul>
 		</div>
     </div>
