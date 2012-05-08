@@ -1,0 +1,35 @@
+<!-- ABOUT -->
+<table id="about">â
+<tr>
+<td WIDTH="50%">
+Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus ullamcorper nisi sed turpis eleifend non ornare turpis luctus. Aliquam tellus ipsum, sodales eu ultrices vel, vulputate a nulla. Lorem ipsum dolor sit amet, consectetur adipiscing elit. In diam odio, auctor eget sollicitudin ac, aliquet eget mauris. Donec tempor enim sit 
+</td>
+<td>
+Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus ullamcorper nisi sed turpis eleifend non ornare turpis luctus. Aliquam tellus ipsum, sodales eu ultrices vel, vulputate a nulla. Lorem ipsum dolor sit amet, consectetur adipiscing elit. In diam odio, auctor eget sollicitudin ac, aliquet eget mauris. Donec tempor enim sit amet nunc ornare aliquet ut ut nisi. </td>
+</tr>
+</table>â
+
+
+<!-- CONTACT -->
+
+
+<p>
+<a href="mailto:contact@igorchibilyaev.com?Subject=From%20igorchibilyaev.com">contact@igorchibilyaev.com<a>
+<br>
+<br>
+<p>
+
+
+<a href='http://facebook.com/'><img src='http://localhost:8000/static/images/linkedin.png' width=26 height=26></a>
+
+&nbsp;&nbsp;
+
+
+<a href='http://facebook.com/'><img src='http://localhost:8000/static/images/facebook.png' width=26 height=26></a>
+
+
+<br>
+<br>
+<br>
+<br>
+

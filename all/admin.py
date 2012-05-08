@@ -1,5 +1,5 @@
 from django.contrib import admin
-from models import Galerry
+from models import Image
 from django.contrib.flatpages.admin import FlatpageForm, FlatPageAdmin
 from django.contrib.flatpages.models import FlatPage
 
@@ -11,17 +11,18 @@ class ExtendedFlatPageForm(FlatpageForm):
 
 
 class ExtendedFlatPageAdmin(FlatPageAdmin):
+    list_display=('title', 'url',)
     form = ExtendedFlatPageForm
     fieldsets = (
         (None, {'fields': ('url', 'title', 'content', 'sites', 'image', 'bukvitsa','template_name')}),
     )
 
-class GalerryAdmin(admin.ModelAdmin):
-    list_display=('title', 'updated','created')
+class ImageAdmin(admin.ModelAdmin):
+    list_display=('picture', 'title','created')
     ordering = ('-created',)
-    list_filter = ('image_type',)
+    list_filter = ('gallery',)
 
 
 admin.site.unregister(FlatPage)
 admin.site.register(Page, ExtendedFlatPageAdmin)
-admin.site.register(Galerry, GalerryAdmin)
+admin.site.register(Image, ImageAdmin)

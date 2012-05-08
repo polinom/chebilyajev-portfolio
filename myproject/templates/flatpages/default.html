@@ -9,10 +9,10 @@
 {%block body%}
     <style>
      .container {
-     	margin-top:150px;
+     	margin-top:130px;
      }
      .bottom_menu{
-          padding-top:100px;
+          padding-top:120px;
           bottom:inherit;
      }
      .bottom_menu a{
@@ -37,7 +37,7 @@
 			{% endthumbnail %}
 		</div>
 		<div class="page_content">
-		    {{ flatpage.content }}
+		    {{flatpage.content|safe}}
 		</div>
 
         <!-- BOTTOM_MENU_GO_HERE-->

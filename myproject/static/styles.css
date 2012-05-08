@@ -1,3 +1,28 @@
+body a{
+	color: black;
+	font-size: 14px;
+	font-family: Arial, "MS Trebuchet", sans-serif;
+	font-style: normal;
+	text-decoration: none;
+}
+
+/*body a:hover{
+	color: black;
+	font-size: 14px;
+	font-family: Arial, "MS Trebuchet", sans-serif;
+	font-style: normal;
+	text-decoration: underline;
+}*/
+
+#about {
+    width:1028px;
+}
+
+table tr td {
+    padding-right:10px;
+}
+​
+
 .menu {
  display: block;
  margin-top: 15px;
@@ -19,7 +44,7 @@ ul.menu li{
     margin-right: auto;
 }
 
-.container.galerry {
+.container.gallery {
 	margin-top:150px;
 }
 
@@ -100,4 +125,11 @@ ul.menu li{
 }
 .bottom_menu li {
   margin-top:10px;
+}
+
+.page_title {
+  margin-bottom:25px;
+}
+.page_image{
+    margin-bottom:45px;
 }

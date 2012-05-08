@@ -1,6 +1,7 @@
 # coding=utf-8
 from django.db import models
 from django.contrib.flatpages.models import FlatPage
+from django.conf import settings
 
 
 class Page(FlatPage):
@@ -13,7 +14,7 @@ class Page(FlatPage):
         return image.url
 
 
-class Galerry(models.Model):
+class Image(models.Model):
 	CHOICES = (
 			('illystration','Illystration'),
 			('storyboard','Storyboard'),
@@ -24,8 +25,14 @@ class Galerry(models.Model):
 	image = models.ImageField(upload_to='images')
 	updated = models.DateTimeField(auto_now=True)
 	created = models.DateTimeField(auto_now_add=True)
-	image_type = models.CharField(max_length=50, choices=CHOICES)
+	gallery = models.CharField(max_length=50, choices=CHOICES)
 
 
 	def __unicode__(self):
 		return self.title
+
+
+	def picture(self):
+		return '<img src="%s" height=100>'%self.image.url
+
+	picture.allow_tags = True
