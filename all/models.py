@@ -24,7 +24,7 @@ class Image(models.Model):
 	description = models.TextField(max_length=1022, blank=True)
 	image = models.ImageField(upload_to='images')
 	updated = models.DateTimeField(auto_now=True)
-	created = models.DateTimeField(auto_now_add=True)
+	created = models.DateTimeField(auto_now_add=True, default='illystration')
 	gallery = models.CharField(max_length=50, choices=CHOICES)
 
 

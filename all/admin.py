@@ -14,13 +14,16 @@ class ExtendedFlatPageAdmin(FlatPageAdmin):
     list_display=('title', 'url',)
     form = ExtendedFlatPageForm
     fieldsets = (
-        (None, {'fields': ('url', 'title', 'content', 'sites', 'image', 'bukvitsa','template_name')}),
+        (None, {'fields': ('url', 'title', 'content', 'sites', 'image', 'template_name')}),
     )
 
 class ImageAdmin(admin.ModelAdmin):
     list_display=('picture', 'title','created')
     ordering = ('-created',)
     list_filter = ('gallery',)
+    fieldsets = (
+        (None, {'fields': ('image', 'gallery',)}),
+    )
 
 
 admin.site.unregister(FlatPage)

@@ -17,9 +17,31 @@ body a{
 #about {
     width:1028px;
 }
+#loader{
+	position: absolute;
+	z-index: 999;
+	margin-left:15px;
+	margin-top:15px;
+
+}
+.nav_dot{
+	padding-right:20px;
+	padding-top:15px;
+}
+
+.loading_place {
+	position: absolute;
+	margin-top:100;
+	display: block;
+	top:50px;
+	left:50%;
+}
 
 table tr td {
-    padding-right:10px;
+    padding:0px 10px 0px 0px;
+	font-size: 12px;
+	font-family: Arial, "MS Trebuchet", sans-serif;
+	line-height:190%;
 }
 ​
 
@@ -36,7 +58,7 @@ ul.menu li{
 
 
 .container{
-	margin-top:300px;
+	margin-top:200px;
 	width:1100px;
 	height:200px;
 	display: block;
