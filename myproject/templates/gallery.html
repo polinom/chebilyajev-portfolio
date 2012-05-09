@@ -36,9 +36,10 @@
 		    {%endfor%}
 		    </div>
 		    <div class="nav">
-		    	{%for page in pages%}
-                   <img  class="nav_dot" src="{{STATIC_URL}}images/page_dor_white.png">
-		    	{%endfor%}
+		    	<a href='#'><img  class="nav_dot"  page="1" src="{{STATIC_URL}}images/page_dor_white.png"></a>
+	    	{%for page in pages%}
+                <a href='#'><img  class="nav_dot" page="{{page|add:"1"}}" src="{{STATIC_URL}}images/page_dor_black.png"></a>
+	    	{%endfor%}
 		    </div>
 
 		    <!-- BOTTOM_MENU_GO_HERE-->
