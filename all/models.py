@@ -2,6 +2,8 @@
 from django.db import models
 from django.contrib.flatpages.models import FlatPage
 from django.conf import settings
+from sorl.thumbnail import get_thumbnail
+
 
 
 class Page(FlatPage):
@@ -33,6 +35,7 @@ class Image(models.Model):
 
 
 	def picture(self):
-		return '<img src="%s" height=100>'%self.image.url
+		im = get_thumbnail(self.image, '60x60', crop='center', quality=99)
+		return '<img src="%s" height=100>'%im.url
 
 	picture.allow_tags = True
