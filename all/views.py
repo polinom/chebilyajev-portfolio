@@ -19,7 +19,6 @@ def gallery(request,gallery):
     pages = int(pages) if pages - int(pages) == 0 else int(pages) + 1
     title_img = TITLE_DICT[gallery]
     images = images[PER_PAGE*page:PER_PAGE+(page*PER_PAGE)]
-    print images
     if not request.is_ajax():
         context = {'title':gallery, 'items': images[:PER_PAGE], 'first_item':images[0], 'title_img':title_img, 'pages':range(pages-1)}
         return render(request, 'gallery.html', context)
