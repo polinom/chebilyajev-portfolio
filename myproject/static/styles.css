@@ -59,7 +59,7 @@ ul.menu li{
 
 .container{
 	margin-top:200px;
-	width:1100px;
+	width:900px;
 	height:200px;
 	display: block;
 	margin-left: auto;
@@ -120,7 +120,9 @@ ul.menu li{
 }
 
 .thumb_list {
-	width:188px;
+	width:200px;
+	height:400px;
+	word-spacing:0px;
 }
 
 .thumb {
@@ -154,4 +156,12 @@ ul.menu li{
 }
 .page_image{
     margin-bottom:45px;
+}
+
+.image_thumb{
+	float: left;
+	cursor: pointer;
+	padding: 3px;
+	display: block-inline;
+	vertical-align: middle;
 }

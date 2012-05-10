@@ -16,6 +16,9 @@
     	body{
 			background-color: #828385;
 		}
+		.container{
+			width:1100px;
+		}
     </style>
     <center><div class="loading_place"></div></center>
     <div class="container gallery">
@@ -29,14 +32,12 @@
 	        <div class="thumb_list">
 		    {%for item in items%}
 		         {% thumbnail item.image "60x60" crop="center" as im %}
-		         <div class="thumb">
-				    <a href="#"><img class="image_thumb" src="{{ im.url }}" width="{{ im.width }}" height="{{ im.height }}" original="{{item.image.url}}"></a>
-				 </div>
+				    <img class="image_thumb" hspace="0" src="{{ im.url }}" width="{{ im.width }}" height="{{ im.height }}" original="{{item.image.url}}">
 				{% endthumbnail %}
 		    {%endfor%}
 		    </div>
 		    <div class="nav">
-		    	<a href='#'><img  class="nav_dot"  page="1" src="{{STATIC_URL}}images/page_dor_white.png"></a>
+		    	<a href='#'><img  class="nav_dot"  page="0" src="{{STATIC_URL}}images/page_dor_white.png"></a>
 	    	{%for page in pages%}
                 <a href='#'><img  class="nav_dot" page="{{page|add:"1"}}" src="{{STATIC_URL}}images/page_dor_black.png"></a>
 	    	{%endfor%}
