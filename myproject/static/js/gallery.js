@@ -25,7 +25,7 @@ $(document).ready(function(){
 
 		$.get('',{'page':page},function(resp){
           $(resp).each(function(index,item){
-          var img_html = '<img class="image_thumb" src="'+item.thumb+'" width="60" height="60" original="'+item.image+'">'
+          var img_html = '<img class="image_thumb" src="'+item.thumb+'" width="58" height="58" original="'+item.image+'">'
            img_list.append(img_html)
           })
 		})

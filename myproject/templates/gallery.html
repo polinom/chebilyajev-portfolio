@@ -28,7 +28,7 @@
 	        <!-- THUMBNAILS ICON LIST GO HERE-->
 	        <div class="thumb_list">
 		    {%for item in items%}
-		         {% thumbnail item.image "60x60" crop="center" as im %}
+		         {% thumbnail item.image "58x58" crop="center" as im %}
 				    <img class="image_thumb" hspace="0" src="{{ im.url }}" width="{{ im.width }}" height="{{ im.height }}" original="{{item.image.url}}">
 				{% endthumbnail %}
 		    {%endfor%}

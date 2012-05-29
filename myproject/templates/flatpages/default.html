@@ -16,7 +16,7 @@
           bottom:inherit;
      }
      .bottom_menu a{
-          color:gray;
+          color: #636466;
      }
      .bottom_menu ul{
 	    list-style-image: url(/static/images/gray_dot.png); 
@@ -36,9 +36,8 @@
 		        <img src="{{ im.url }}" width="{{ im.width }}" height="{{ im.height }}">
 			{% endthumbnail %}
 		</div>
-		<div class="page_content">
-		    {{flatpage.content|safe}}
-		</div>
+
+        <div class="page_content">{{flatpage.content|safe}}</div>
 
         <!-- BOTTOM_MENU_GO_HERE-->
 		<div class="bottom_menu">

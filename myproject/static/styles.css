@@ -27,6 +27,7 @@ body a{
 .nav_dot{
 	padding-right:20px;
 	padding-top:15px;
+	padding-left: 3px;
 }
 
 .loading_place {
@@ -38,10 +39,10 @@ body a{
 }
 
 table tr td {
-    padding:0px 10px 0px 0px;
+    padding:0px 20px 0px 0px;
 	font-size: 12px;
 	font-family: Arial, "MS Trebuchet", sans-serif;
-	line-height:190%;
+	line-height:20px;
 }
 ​
 
@@ -105,7 +106,7 @@ ul.menu li{
 #thumb_container {
 	display: inline;
 	float: left;
-	margin-right:10px;
+	margin-right:0px;
 	position:relative;
 	height:650px;
 }
@@ -116,12 +117,13 @@ ul.menu li{
 }
 
 .title {
-	padding-bottom:30px;
+	padding-bottom:20px;
+	padding-left:4px;
 }
 
 .thumb_list {
 	width:200px;
-	height:400px;
+	height:390px;
 	word-spacing:0px;
 }
 
@@ -169,4 +171,10 @@ ul.menu li{
 
 .gray_dot{
   margin:0px 12px 0px 12px;
+  color: gray;
+}
+
+.page_content{
+	padding:0;
+	margin:0;
 }

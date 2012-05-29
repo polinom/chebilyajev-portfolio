@@ -23,5 +23,5 @@ def gallery(request,gallery):
         context = {'title':gallery, 'items': images[:PER_PAGE], 'first_item':images[0], 'title_img':title_img, 'pages':range(pages-1)}
         return render(request, 'gallery.html', context)
     else:
-    	data = [{'image':image.image.url,'thumb':get_thumbnail(image.image, '60x60', crop='center', quality=99).url} for image in images]
+    	data = [{'image':image.image.url,'thumb':get_thumbnail(image.image, '58x58', crop='center', quality=99).url} for image in images]
     	return HttpResponse(simplejson.dumps(data),mimetype="application/json")
