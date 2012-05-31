@@ -5,7 +5,7 @@ from django.utils import simplejson
 from django.http import HttpResponse
 from sorl.thumbnail import get_thumbnail
 
-TITLE_DICT = {'illystration':'illustration.png',
+TITLE_DICT = {'illustration':'illustration.png',
              'storyboard': 'storyboard.png',
              'character_design': 'char_design.png'
 }
