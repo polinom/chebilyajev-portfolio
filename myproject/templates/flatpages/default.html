@@ -13,7 +13,7 @@
      }
      .bottom_menu{
           padding-top:120px;
-          bottom:inherit;
+          position: inherit;
      }
      .bottom_menu a{
           color: #4b4b4b;
@@ -36,9 +36,7 @@
 		        <img src="{{ im.url }}" width="{{ im.width }}" height="{{ im.height }}">
 			{% endthumbnail %}
 		</div>
-
         <div class="page_content">{{flatpage.content|safe}}</div>
-
         <!-- BOTTOM_MENU_GO_HERE-->
 		<div class="bottom_menu">
 	 			<ul>
@@ -52,7 +50,6 @@
 	                {%ifequal flatpage.title "Contact"%}
 					<li><a href="/about/">About</a></li>
 	                {%endifequal%}
-
 				</ul>
 		</div>
     </div>
