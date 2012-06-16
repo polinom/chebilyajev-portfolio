@@ -175,3 +175,9 @@ ul.menu li{
 	padding:0;
 	margin:0;
 }
+
+
+a img {
+	border:0;
+	filter: 0;
+}
