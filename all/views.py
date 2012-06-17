@@ -5,9 +5,9 @@ from django.utils import simplejson
 from django.http import HttpResponse
 from sorl.thumbnail import get_thumbnail
 
-TITLE_DICT = {'illustration':'illustration_new.png',
-             'storyboard': 'storyboard_new.png',
-             'character_design': 'char_design_new.png'
+TITLE_DICT = {'illustration':'illustration.jpg',
+             'storyboard': 'storyboard.jpg',
+             'character_design': 'char_design.jpg'
 }
 PER_PAGE = 18
 

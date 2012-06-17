@@ -143,7 +143,7 @@ ul.menu li{
 .bottom_menu ul{
 	padding:0;
     list-style-type: none;
-    list-style-image: url(/static/images/dot_new.png); 
+    list-style-image: url(/static/images/dot.jpg); 
 }
 .bottom_menu li {
   margin-top:10px;
