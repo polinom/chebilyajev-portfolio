@@ -16,8 +16,8 @@ $(document).ready(function(){
 		e.preventDefault()
 		var img_list = $('.thumb_list')
 
-		$('.nav_dot').attr('src','/static/images/page_dor_black.png')
-		$(this).attr('src','/static/images/page_dor_white.png')
+		$('.nav_dot').attr('src','/static/images/page_dor_black.jpg')
+		$(this).attr('src','/static/images/page_dor_white.jpg')
 
 
 		img_list.html('')
